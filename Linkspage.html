@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Laser Engraving</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="Resources/CSS/style.css">
+    <link rel="stylesheet" type="text/css" href="Resources/CSS/grid.css">
+    <link rel="stylesheet" type="text/css" href="Resources/CSS/normalize.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Devin Snell">
     <meta name="date" content="2020-11-01">
     <link rel="stylesheet" type="text/css" href="HTMLClass/style.css">
+    <title>Links</title>
 </head>
 
 <body>
@@ -24,20 +26,47 @@
             </div>
         </nav>
 
-<br>
-<br>
-<br>
-    <!-- This is my heading -->
-    <h1>Links</h1>
-    
-    <!-- These are links to my hobbies -->
-    <h3>Links</h3>
-      <p>Follow the links below to learn more about my other hobbies!</p>
-      <ul>
-        <li><a href="https://www.wikihow.com/Learn-Carpentry" target="_blank">Carpentry</a></li>
-        <li><a href="https://www.howtostudykorean.com/" target="_blank">How to Study Korean</a></li>
-        <li><a href="https://www.toastmasters.org/" target="_blank">Toastmasters</a></li>
-      </ul>
+<section class="section-features">
+    <div class="row">
+        <h2>Links</h2>
+        <p class="long-copy">Here are some of my other hobbies</p>
+    </div>
+
+    <div class="row">
+        <div class="col span-1-of-4 box">
+            <ul class="link-showcase clearfix">
+                <figure class="link-photo">
+                    <h3>Woodworking</h3>
+                        <a href="https://www.wikihow.com/Learn-Carpentry" target="_blank">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Woodworking_Tools_at_the_Women%27s_Woodshop_in_Minneapolis%2C_MN.jpg/1920px-Woodworking_Tools_at_the_Women%27s_Woodshop_in_Minneapolis%2C_MN.jpg" alt="Carpentry"/>
+                        </a>          
+        </div>
+        <div class="col span-1-of-4 box">
+            <ul class="link-showcase clearfix">
+                <figure class="link-photo">
+                    <h3>Korean</h3>
+                        <a href="https://www.howtostudykorean.com/" target="_blank">
+                            <img src="https://i2.wp.com/lindiebotes.com/wp-content/uploads/2020/05/2.jpg?resize=1536%2C1023&ssl=1" alt="Korean"/>
+                        </a>    
+        </div>
+        <div class="col span-1-of-4 box">
+            <ul class="link-showcase clearfix">
+                <figure class="link-photo">
+                    <h3>Public Speaking</h3>
+                        <a href="https://www.toastmasters.org/" target="_blank">
+                            <img src="https://target-talk.eu/sites/target-talk.eu/files/styles/article_image/public/2019-04/toastmasters.jpg?itok=ijuntexF" alt="Public-speaking"/>
+                        </a>
+        </div>
+        <div class="col span-1-of-4 box">
+            <ul class="link-showcase clearfix">
+                <figure class="link-photo">
+                    <h3>Performing</h3>
+                        <a href="https://www.wikihow.com/Do-Improv-Comedy" target="_blank">
+                            <img src="https://farm4.static.flickr.com/3397/3552276930_32da5b64eb.jpg" alt="Performing"/>
+                        </a>
+        </div>
+    </div>
+</section>
 
 </body>
 </html>
