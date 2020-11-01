@@ -1,9 +1,8 @@
 body {
-    background-image: linear-gradient(rgba(13, 1, 80, 0.993), rgba(110, 27, 27, 0.699)), url("Resources/Images/LaserBG.jpg");
+    background-image: linear-gradient(rgba(12, 6, 48, 0.993), rgba(110, 27, 27, 0.699));
     background-size: cover;
     background-position: center;
     height: 100vh;
-    background-size: 100% auto;
     margin: 0 10%;
     font-family: Source Sans Pro;
     color: #FFA372;
@@ -13,7 +12,7 @@ h1 {
     color: #cebc81;
     text-align: center;
     font-weight: normal;
-    border-bottom: 2px solid #f4f8fc 75px;
+    border-bottom: 2px solid #f4f8fc 10px;
 }
 td {
     margin-top: 30;
@@ -25,9 +24,7 @@ td {
 h2 {
     color: #cebc81;
     text-align: center;
-    margin-left: 230px;
-    border-left: 5px solid #ED6663;
-    border-top: 2px solid #ED6663;
+    margin-left: 10px;
     padding: 0px;
 }
 p {
@@ -47,6 +44,7 @@ img {
     float: right;
     margin: 1em;
     width: 500px;
+    border-radius: 8px;
 }
 table {
     float: right;
@@ -114,15 +112,16 @@ section {
 h1, 
 h2,
 h3 {
+    color: #cebc81;
     font-weight: 300;
     text-transform: uppercase;
     padding: 1em;
+    text-align: center;
 }
 
 h1 {
     margin-top: 0;
     margin-bottom: 20px;
-    color: #fff;
     font-size: 240%;
     word-spacing: 4px;
     letter-spacing: 1px;
@@ -157,6 +156,7 @@ h2:after {
     line-height: 145%;
     width: 70%;
     margin-left: 15%;
+    text-align: center;
 }
 
 .box p {
@@ -242,7 +242,7 @@ h2:after {
     display: inline-block;
     margin-left: 40px;
     margin-top: 20px;
-        padding: 1em;
+    padding: 1em;
 }
 
 .main-nav li a:link,
@@ -278,25 +278,25 @@ h2:after {
     padding: 0;
 }
 
-.meals-showcase {
+.link-showcase {
     list-style: none;
     width: 100%;
 }
 
-.meals-showcase li {
+.link-showcase li {
     display: block;
     float: left;
     width: 25%;
 }
 
-.meal-photo {
+.link-photo {
     width: 100%;
     margin: 0;
     overflow: hidden;
-    background-color: black;
+
 }
 
-.meal-photo img {
+.link-photo img {
     opacity: 0.7;
     width: 100%;
     height: auto;
@@ -304,7 +304,7 @@ h2:after {
     transition: transform 0.5s, opacity 0.5s;
 }
 
-.meal-photo img:hover {
+.link-photo img:hover {
     opacity: 1;
     transform: scale(1.03);
 }
