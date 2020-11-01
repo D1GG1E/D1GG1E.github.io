@@ -1,5 +1,8 @@
 body {
-    background-color:#4E89AE;
+    background-image: linear-gradient(rgba(13, 1, 80, 0.993), rgba(110, 27, 27, 0.699)), url("Resources/Images/LaserBG.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
     background-size: 100% auto;
     margin: 0 10%;
     font-family: Source Sans Pro;
@@ -21,11 +24,11 @@ td {
 }
 h2 {
     color: #cebc81;
-    text-align: left;
+    text-align: center;
     margin-left: 230px;
     border-left: 5px solid #ED6663;
     border-top: 2px solid #ED6663;
-    padding: 10px;
+    padding: 0px;
 }
 p {
     text-align: justify;
@@ -63,8 +66,10 @@ section {
 }
 
 html {
-    background-color: #fff;
-    color: #555555;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
     font-family: 'Lato', 'Arial', 'sans-serif';
     font-weight: 300;
     font-size: 20px;
@@ -213,13 +218,6 @@ h2:after {
 /* HEADER */
 /* --------------------------------------- */
 
-header {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.699), rgba(0, 0, 0, 0.699)), url(Images/hero.jpg);
-    background-size: cover;
-    background-position: center;
-    height: 100vh;
-}
-
 .hero-text-box {
     position: absolute;
     width: 1140px;
@@ -365,5 +363,3 @@ header {
     padding: 1em;
     margin-left: 10px;
 }
-
-/*--style end-->
