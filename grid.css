@@ -1,689 +1,367 @@
-
-/*  SECTIONS  ============================================================================= */
-
-.section {
-	clear: both;
-	padding: 0px;
-	margin: 0px;
+body {
+    background-image: linear-gradient(rgba(12, 6, 48, 0.993), rgba(110, 27, 27, 0.699));
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    margin: 0 10%;
+    font-family: Source Sans Pro;
+    color: #FFA372;
+    text-align: justify;
+}
+h1 {
+    color: #cebc81;
+    text-align: center;
+    font-weight: normal;
+    border-bottom: 2px solid #f4f8fc 10px;
+}
+td {
+    margin-top: 30;
+    height: 5px;
+    text-align: center;
+    margin: 200px 10;
+    border: 2px solid #ED6663;
+}
+h2 {
+    color: #cebc81;
+    text-align: center;
+    margin-left: 10px;
+    padding: 0px;
+}
+p {
+    text-align: justify;
+    margin-left: 0px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: large;
+}
+a {
+    color: #faf3f6;
+}
+a:hover {
+    color: #ED6663;
+}
+img {
+    float: right;
+    margin: 1em;
+    width: 500px;
+    border-radius: 8px;
+}
+table {
+    float: right;
+}
+section {
+    padding: 80px 0;
 }
 
-/*  GROUPING  ============================================================================= */
+/* --------------------------------------- */
+/* BASIC SETUP */
+/* --------------------------------------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    font-family: 'Lato', 'Arial', 'sans-serif';
+    font-weight: 300;
+    font-size: 20px;
+    text-rendering: optimizeLegibility;
+}
+
+.clearfix {zoom: 1}
+.clearfix:after {
+    content: '.';
+    clear: both;
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+
+.section-steps {
+    background-color: rgb(230, 230, 230);
+}
+
+/* --------------------------------------- */
+/* REUSABLE COMPONENTS */
+/* --------------------------------------- */
+
+/* orange color #e67e22 */
 
 .row {
-    zoom: 1; /* For IE 6/7 (trigger hasLayout) */
+    max-width: 1140px;
+    margin: 0 auto 0 auto;
+    margin: 0 auto;
 }
 
-.row:before,
-.row:after {
-    content:"";
-    display:table;
+section {
+    padding: 80px 0;
 }
-.row:after {
-    clear:both;
-}
-
-/*  GRID COLUMN SETUP   ==================================================================== */
-
-.col {
-	display: block;
-	float:left;
-	margin: 1% 0 1% 1.6%;
-}
-
-.col:first-child { margin-left: 0; } /* all browsers except IE6 and lower */
-
-
-/*  REMOVE MARGINS AS ALL GO FULL WIDTH AT 480 PIXELS */
-
-@media only screen and (max-width: 480px) {
-	.col { 
-		/*margin: 1% 0 1% 0%;*/
-        margin: 0;
-	}
-}
-
-
-/*  GRID OF TWO   ============================================================================= */
-
-
-.span-2-of-2 {
-	width: 100%;
-}
-
-.span-1-of-2 {
-	width: 49.2%;
-}
-
-/*  GO FULL WIDTH AT LESS THAN 480 PIXELS */
-
-@media only screen and (max-width: 480px) {
-	.span-2-of-2 {
-		width: 100%; 
-	}
-	.span-1-of-2 {
-		width: 100%; 
-	}
-}
-
-
-/*  GRID OF THREE   ============================================================================= */
-
-	
-.span-3-of-3 {
-	width: 100%; 
-}
-
-.span-2-of-3 {
-	width: 66.13%; 
-}
-
-.span-1-of-3 {
-	width: 32.26%; 
-}
-
-
-/*  GO FULL WIDTH AT LESS THAN 480 PIXELS */
-
-@media only screen and (max-width: 480px) {
-	.span-3-of-3 {
-		width: 100%; 
-	}
-	.span-2-of-3 {
-		width: 100%; 
-	}
-	.span-1-of-3 {
-		width: 100%;
-	}
-}
-
-/*  GRID OF FOUR   ============================================================================= */
-
-	
-.span-4-of-4 {
-	width: 100%; 
-}
-
-.span-3-of-4 {
-	width: 74.6%; 
-}
-
-.span-2-of-4 {
-	width: 49.2%; 
-}
-
-.span-1-of-4 {
-	width: 23.8%; 
-}
-
-
-/*  GO FULL WIDTH AT LESS THAN 480 PIXELS */
-
-@media only screen and (max-width: 480px) {
-	.span-4-of-4 {
-		width: 100%; 
-	}
-	.span-3-of-4 {
-		width: 100%; 
-	}
-	.span-2-of-4 {
-		width: 100%; 
-	}
-	.span-1-of-4 {
-		width: 100%; 
-	}
-}
-
-
-/*  GRID OF FIVE   ============================================================================= */
-
-	
-.span-5-of-5 {
-	width: 100%;
-}
-
-.span-4-of-5 {
-  	width: 79.68%; 
-}
-
-.span-3-of-5 {
-  	width: 59.36%; 
-}
-
-.span-2-of-5 {
-  	width: 39.04%;
-}
-
-.span-1-of-5 {
-  	width: 18.72%;
-}
-
-
-/*  GO FULL WIDTH AT LESS THAN 480 PIXELS */
-
-@media only screen and (max-width: 480px) {
-	.span-5-of-5 {
-		width: 100%; 
-	}
-	.span-4-of-5 {
-		width: 100%; 
-	}
-	.span-3-of-5 {
-		width: 100%; 
-	}
-	.span-2-of-5 {
-		width: 100%; 
-	}
-	.span-1-of-5 {
-		width: 100%; 
-	}
-}
-
-
-/*  GRID OF SIX   ============================================================================= */
-
-
-.span-6-of-6 {
-	width: 100%;
-}
-
-.span-5-of-6 {
-  	width: 83.06%;
-}
-
-.span-4-of-6 {
-  	width: 66.13%;
-}
-
-.span-3-of-6 {
-  	width: 49.2%;
-}
-
-.span-2-of-6 {
-  	width: 32.26%;
-}
-
-.span-1-of-6 {
-  	width: 15.33%;
-}
 
-
-/*  GO FULL WIDTH AT LESS THAN 480 PIXELS */
-
-@media only screen and (max-width: 480px) {
-	.span-6-of-6 {
-		width: 100%; 
-	}
-	.span-5-of-6 {
-		width: 100%; 
-	}
-	.span-4-of-6 {
-		width: 100%; 
-	}
-	.span-3-of-6 {
-		width: 100%; 
-	}
-	.span-2-of-6 {
-		width: 100%; 
-	}
-	.span-1-of-6 {
-		width: 100%; 
-	}
-}
-
-
-
-/*  GRID OF SEVEN   ============================================================================= */
-
-
-.span-7-of-7 {
-	width: 100%;
-}
-
-.span-6-of-7 {
-	width: 85.48%;
-}
-
-.span-5-of-7 {
-  	width: 70.97%;
-}
-
-.span-4-of-7 {
-  	width: 56.45%;
-}
-
-.span-3-of-7 {
-  	width: 41.94%;
-}
-
-.span-2-of-7 {
-  	width: 27.42%;
-}
-
-.span-1-of-7 {
-  	width: 12.91%;
-}
-
-
-/*  GO FULL WIDTH AT LESS THAN 480 PIXELS */
-
-@media only screen and (max-width: 480px) {
-	.span-7-of-7 {
-		width: 100%; 
-	}
-	.span-6-of-7 {
-		width: 100%; 
-	}
-	.span-5-of-7 {
-		width: 100%; 
-	}
-	.span-4-of-7 {
-		width: 100%; 
-	}
-	.span-3-of-7 {
-		width: 100%; 
-	}
-	.span-2-of-7 {
-		width: 100%; 
-	}
-	.span-1-of-7 {
-		width: 100%; 
-	}
-}
-
-
-/*  GRID OF EIGHT   ============================================================================= */
-
-	
-.span-8-of-8 {
-	width: 100%;
-}
-
-.span-7-of-8 {
-	width: 87.3%; 
-}
-
-.span-6-of-8 {
-	width: 74.6%; 
-}
-
-.span-5-of-8 {
-	width: 61.9%; 
-}
-
-.span-4-of-8 {
-	width: 49.2%; 
-}
-
-.span-3-of-8 {
-	width: 36.5%;
+.box {
+    padding: 1%;
 }
 
-.span-2-of-8 {
-	width: 23.8%; 
-}
-
-.span-1-of-8 {
-	width: 11.1%; 
-}
-
-
-/*  GO FULL WIDTH AT LESS THAN 480 PIXELS */
-
-@media only screen and (max-width: 480px) {
-	.span-8-of-8 {
-		width: 100%; 
-	}
-	.span-7-of-8 {
-		width: 100%; 
-	}
-	.span-6-of-8 {
-		width: 100%; 
-	}
-	.span-5-of-8 {
-		width: 100%; 
-	}
-	.span-4-of-8 {
-		width: 100%; 
-	}
-	.span-3-of-8 {
-		width: 100%; 
-	}
-	.span-2-of-8 {
-		width: 100%; 
-	}
-	.span-1-of-8 {
-		width: 100%; 
-	}
-}
-
-
-/*  GRID OF NINE   ============================================================================= */
-
-
-.span-9-of-9 {
-	width: 100%;
-}
-
-.span-8-of-9 {
-	width: 88.71%;
-}
-
-.span-7-of-9 {
-	width: 77.42%; 
-}
-
-.span-6-of-9 {
-	width: 66.13%; 
-}
-
-.span-5-of-9 {
-	width: 54.84%; 
-}
+/* -------HEADINGS------- */
 
-.span-4-of-9 {
-	width: 43.55%; 
+h1, 
+h2,
+h3 {
+    color: #cebc81;
+    font-weight: 300;
+    text-transform: uppercase;
+    padding: 1em;
+    text-align: center;
 }
 
-.span-3-of-9 {
-	width: 32.26%;
+h1 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 240%;
+    word-spacing: 4px;
+    letter-spacing: 1px;
 }
 
-.span-2-of-9 {
-	width: 20.97%; 
+h2 {
+    font-size: 180%;
+    word-spacing: 2px;
+    text-align: center;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
 }
 
-.span-1-of-9 {
-	width: 9.68%; 
+h3 {
+    font-size: 110%;
+    margin-bottom: 15px;
 }
-
 
-/*  GO FULL WIDTH AT LESS THAN 480 PIXELS */
-
-@media only screen and (max-width: 480px) {
-	.span-9-of-9 {
-		width: 100%; 
-	}
-	.span-8-of-9 {
-		width: 100%; 
-	}
-	.span-7-of-9 {
-		width: 100%; 
-	}
-	.span-6-of-9 {
-		width: 100%; 
-	}
-	.span-5-of-9 {
-		width: 100%; 
-	}
-	.span-4-of-9 {
-		width: 100%; 
-	}
-	.span-3-of-9 {
-		width: 100%; 
-	}
-	.span-2-of-9 {
-		width: 100%; 
-	}
-	.span-1-of-9 {
-		width: 100%; 
-	}
+h2:after {
+    display: block;
+    height: 2px;
+    background-color: #e67e22;
+    content: " ";
+    width: 100px;
+    margin: 0 auto;
+    margin-top: 30px;
 }
-
 
-/*  GRID OF TEN   ============================================================================= */
+/* -------PARAGRAPH-------- */
 
-
-.span-10-of-10 {
-	width: 100%;
+.long-copy {
+    line-height: 145%;
+    width: 70%;
+    margin-left: 15%;
+    text-align: center;
 }
 
-.span-9-of-10 {
-	width: 89.84%;
+.box p {
+    font-size: 90%;
+    line-height: 145%;
 }
 
-.span-8-of-10 {
-	width: 79.68%;
+/* ------ICONS------- */
+.icon-big {
+    font-size: 350%;
+    display: block;
+    color: #e67e22;
+    margin-bottom: 10px;
 }
 
-.span-7-of-10 {
-	width: 69.52%; 
-}
+/* -------BUTTONS------- */
 
-.span-6-of-10 {
-	width: 59.36%; 
+.btn:link, 
+.btn:visited {
+    display: inline-block;
+    padding: 10px 30px ;
+    font-weight: 300;
+    text-decoration: none;
+    border-radius: 200px;
+    transition: background-color 0.2s, border 0.2s, color 0.2s;
 }
 
-.span-5-of-10 {
-	width: 49.2%; 
+.btn:hover,
+.btn:active {
+    background-color: #cf6d17;
 }
 
-.span-4-of-10 {
-	width: 39.04%; 
+.btn-full:link,
+.btn-full:visited {
+    background-color: #e67e22;
+    border: 1px solid #e67e22;
+    color: #fff;
+    margin-right: 15px;
 }
 
-.span-3-of-10 {
-	width: 28.88%;
+.btn-ghost:link,
+.btn-ghost:visited {
+    border: 1px solid #e67e22;
+    color: #e67e22;
 }
 
-.span-2-of-10 {
-	width: 18.72%; 
+.btn-full:hover,
+.btn-full:active {
+    border: 1px solid #cf6d17;
 }
 
-.span-1-of-10 {
-	width: 8.56%; 
+.btn-ghost:hover,
+.btn-ghost:active {
+    border: 1px solid #cf6d17;
+    color: #fff;
 }
 
+/* --------------------------------------- */
+/* HEADER */
+/* --------------------------------------- */
 
-/*  GO FULL WIDTH AT LESS THAN 480 PIXELS */
-
-@media only screen and (max-width: 480px) {
-	.span-10-of-10 {
-		width: 100%; 
-	}
-	.span-9-of-10 {
-		width: 100%; 
-	}
-	.span-8-of-10 {
-		width: 100%; 
-	}
-	.span-7-of-10 {
-		width: 100%; 
-	}
-	.span-6-of-10 {
-		width: 100%; 
-	}
-	.span-5-of-10 {
-		width: 100%; 
-	}
-	.span-4-of-10 {
-		width: 100%; 
-	}
-	.span-3-of-10 {
-		width: 100%; 
-	}
-	.span-2-of-10 {
-		width: 100%; 
-	}
-	.span-1-of-10 {
-		width: 100%; 
-	}
+.hero-text-box {
+    position: absolute;
+    width: 1140px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
-
-
-/*  GRID OF ELEVEN   ============================================================================= */
 
-.span-11-of-11 {
-	width: 100%;
+.logo {
+    height: 100px;
+    width: auto;
+    float: left;
+    margin-top: 20px;
 }
 
-.span-10-of-11 {
-	width: 90.76%;
+.main-nav {
+    float: right;
+    list-style: none;
 }
 
-.span-9-of-11 {
-	width: 81.52%;
+.main-nav li {
+    display: inline-block;
+    margin-left: 40px;
+    margin-top: 20px;
+    padding: 1em;
 }
 
-.span-8-of-11 {
-	width: 72.29%;
+.main-nav li a:link,
+.main-nav li a:visited {
+    padding: 8px 0;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 90%;
+    margin-top: 55px;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom 0.2s;
 }
 
-.span-7-of-11 {
-	width: 63.05%; 
+.main-nav li a:hover,
+.main-nav li a:active {
+    border-bottom: 2px solid #e67e22;
 }
 
-.span-6-of-11 {
-	width: 53.81%; 
-}
+/* --------------------------------------- */
+/* FEATURES */
+/* --------------------------------------- */
 
-.span-5-of-11 {
-	width: 44.58%; 
+.section-features .long-copy {
+    margin-bottom: 30px;
 }
 
-.span-4-of-11 {
-	width: 35.34%; 
-}
+/* --------------------------------------- */
+/* MEALS */
+/* --------------------------------------- */
 
-.span-3-of-11 {
-	width: 26.1%;
+.section-meals {
+    padding: 0;
 }
 
-.span-2-of-11 {
-	width: 16.87%; 
+.link-showcase {
+    list-style: none;
+    width: 100%;
 }
 
-.span-1-of-11 {
-	width: 7.63%; 
+.link-showcase li {
+    display: block;
+    float: left;
+    width: 25%;
 }
 
+.link-photo {
+    width: 100%;
+    margin: 0;
+    overflow: hidden;
 
-/*  GO FULL WIDTH AT LESS THAN 480 PIXELS */
-
-@media only screen and (max-width: 480px) {
-	.span-11-of-11 {
-		width: 100%; 
-	}
-	.span-10-of-11 {
-		width: 100%; 
-	}
-	.span-9-of-11 {
-		width: 100%; 
-	}
-	.span-8-of-11 {
-		width: 100%; 
-	}
-	.span-7-of-11 {
-		width: 100%; 
-	}
-	.span-6-of-11 {
-		width: 100%; 
-	}
-	.span-5-of-11 {
-		width: 100%; 
-	}
-	.span-4-of-11 {
-		width: 100%; 
-	}
-	.span-3-of-11 {
-		width: 100%; 
-	}
-	.span-2-of-11 {
-		width: 100%; 
-	}
-	.span-1-of-11 {
-		width: 100%; 
-	}
 }
-
-
-/*  GRID OF TWELVE   ============================================================================= */
 
-.span-12-of-12 {
-	width: 100%;
+.link-photo img {
+    opacity: 0.7;
+    width: 100%;
+    height: auto;
+    transform: scale(1.15);
+    transition: transform 0.5s, opacity 0.5s;
 }
 
-.span-11-of-12 {
-	width: 91.53%;
+.link-photo img:hover {
+    opacity: 1;
+    transform: scale(1.03);
 }
 
-.span-10-of-12 {
-	width: 83.06%;
-}
+/* --------------------------------------- */
+/* HOW IT WORKS
+/* --------------------------------------- */
 
-.span-9-of-12 {
-	width: 74.6%;
-}
 
-.span-8-of-12 {
-	width: 66.13%;
+.steps-box:first-child {
+    text-align: right;
+    padding-right: 3%;
+    margin-top: 30px;
 }
 
-.span-7-of-12 {
-	width: 57.66%; 
+.steps-box:last-child {
+    padding-left: 3%;
+    margin-top: 70px;
 }
 
-.span-6-of-12 {
-	width: 49.2%; 
+.app-screen {
+    width: 40%;
+    margin-left: 300px;
 }
 
-.span-5-of-12 {
-	width: 40.73%; 
+.works-step {
+    margin-top: 60px;
+    margin-bottom: 50px;
 }
 
-.span-4-of-12 {
-	width: 32.26%; 
+.works-step:last-of-type {
+    margin-bottom: 80px;
 }
 
-.span-3-of-12 {
-	width: 23.8%;
+.works-step div {
+    color: #e67e22;
+    border: 2px solid #e67e22;
+    display: inline-block;
+    border-radius: 50%;
+    height: 55px;
+    width: 55px;
+    text-align: center;
+    padding: 5px;
+    float: left;
+    font-size: 150%;
+    margin-right: 25px;
 }
 
-.span-2-of-12 {
-	width: 15.33%; 
+.btn-app img {
+    height: 50px;
+    width: auto;
+    margin-right: 10px;
 }
 
-.span-1-of-12 {
-	width: 6.86%; 
+.links div {
+    padding: 1em;
+    margin-left: 10px;
 }
 
-
-/*  GO FULL WIDTH AT LESS THAN 480 PIXELS */
-
-@media only screen and (max-width: 480px) {
-	.span-12-of-12 {
-		width: 100%; 
-	}
-	.span-11-of-12 {
-		width: 100%; 
-	}
-	.span-10-of-12 {
-		width: 100%; 
-	}
-	.span-9-of-12 {
-		width: 100%; 
-	}
-	.span-8-of-12 {
-		width: 100%; 
-	}
-	.span-7-of-12 {
-		width: 100%; 
-	}
-	.span-6-of-12 {
-		width: 100%; 
-	}
-	.span-5-of-12 {
-		width: 100%; 
-	}
-	.span-4-of-12 {
-		width: 100%; 
-	}
-	.span-3-of-12 {
-		width: 100%; 
-	}
-	.span-2-of-12 {
-		width: 100%; 
-	}
-	.span-1-of-12 {
-		width: 100%; 
-	}
-}
+/*--style end-->
